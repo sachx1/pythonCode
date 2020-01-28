@@ -15,15 +15,13 @@ speechPoints = int()
 attackPoints = int()
 defencePoints = int()
 
-magicCnt = magicPoints
-speechCnt = speechPoints
-attackCnt = attackPoints
-defenceCnt = defencePoints
+#magicCnt = magicPoints
+#speechCnt = speechPoints
+#attackCnt = attackPoints
+#defenceCnt = defencePoints
 
 
 username = input("Enter username: ")
-
-
 
 while True:
     race = input("Enter your race: ")
@@ -38,25 +36,25 @@ while skillPoints > 0:
         points = int(input("how many points: "))
         pointsLeft = skillPoints - points
         skillPoints = pointsLeft 
-        points = magicPoints
+        magicPoints += points
         print("You have ", + pointsLeft, " left")
     elif skills == 'speech':
         points = int(input("how many points: "))
         pointsLeft = skillPoints - points
         skillPoints = pointsLeft 
-        points = speechPoints
+        speechPoints += points
         print("You have ", + pointsLeft, " left")
     elif skills == 'attack':
         points = int(input("how many points: "))
         pointsLeft = skillPoints - points 
         skillPoints = pointsLeft
-        points = attackPoints
+        attackPoints += points
         print("You have ", + pointsLeft, " left")
     elif skills == 'defence':
         points = int(input("how many points: "))
         pointsLeft = skillPoints - points 
         skillPoints = pointsLeft
-        points = defencePoints
+        defencePoints += points
         print("You have ", + pointsLeft, " left")
     
 print("------------------------------------------------")
