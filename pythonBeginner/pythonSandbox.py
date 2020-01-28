@@ -1,0 +1,73 @@
+import sys
+
+#thisTuple = ("apple", "banana", "cherry")
+#print(thisTuple)
+
+print("Welcome to the life rpg")
+print("You have 4 skills, Magic, Speech, Attack, Defence")
+print("There are 32 skill points available")
+print("Races are human, elf, half-breed, mutant")
+skillPoints = 32
+pointsLeft = skillPoints
+
+magicPoints = 0
+speechPoints = 0
+attackPoints = 0
+defencePoints = 0
+
+magicCnt = magicPoints
+speechCnt = speechPoints
+attackCnt = attackPoints
+defenceCnt = defencePoints
+
+
+username = input("Enter username: ")
+
+race = input("Enter your race: ")
+
+while skillPoints > 0:
+    skills = input("Enter which skill you want: ")
+    if skills == 'magic':
+        points = int(input("how many points: "))
+        pointsLeft = skillPoints - points
+        skillPoints = pointsLeft 
+        points = magicPoints
+        print("You have ", + pointsLeft, " left")
+    elif skills == 'speech':
+        points = int(input("how many points: "))
+        pointsLeft = skillPoints - points
+        skillPoints = pointsLeft 
+        points = speechPoints
+        print("You have ", + pointsLeft, " left")
+    elif skills == 'attack':
+        points = int(input("how many points: "))
+        pointsLeft = skillPoints - points 
+        skillPoints = pointsLeft
+        points = attackPoints
+        print("You have ", + pointsLeft, " left")
+    elif skills == 'defence':
+        points = int(input("how many points: "))
+        pointsLeft = skillPoints - points 
+        skillPoints = pointsLeft
+        points = defencePoints
+        print("You have ", + pointsLeft, " left")
+    
+print("------------------------------------------------")
+
+print("Your RPG Character is ")
+print("Username is: " + username)
+print("Your race is: " + race)
+print("Skillpoints breakdown")
+print("Magic", + magicCnt)
+print("Speech", + speechCnt)
+print("Attack", + attackCnt)
+print("Defence", + defenceCnt)
+
+            
+
+
+
+
+
+
+#print ("Username is: " + username)
