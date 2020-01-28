@@ -10,10 +10,10 @@ print("Races are human, elf, half-breed, mutant")
 skillPoints = 32
 pointsLeft = skillPoints
 
-magicPoints = 0
-speechPoints = 0
-attackPoints = 0
-defencePoints = 0
+magicPoints = int()
+speechPoints = int()
+attackPoints = int()
+defencePoints = int()
 
 magicCnt = magicPoints
 speechCnt = speechPoints
@@ -23,7 +23,14 @@ defenceCnt = defencePoints
 
 username = input("Enter username: ")
 
-race = input("Enter your race: ")
+
+
+while True:
+    race = input("Enter your race: ")
+    if race == 'human' or race == 'elf' or race == 'half-breed' or race == 'mutant':
+        break
+    elif race != 'human' or race != 'elf' or race != 'half-breed' or race != 'mutant':
+        print("not a valid race")
 
 while skillPoints > 0:
     skills = input("Enter which skill you want: ")
@@ -54,7 +61,7 @@ while skillPoints > 0:
     
 print("------------------------------------------------")
 
-print("Your RPG Character is ")
+print("Your RPG Character")
 print("Username is: " + username)
 print("Your race is: " + race)
 print("Skillpoints breakdown")
