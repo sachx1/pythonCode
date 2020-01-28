@@ -63,10 +63,10 @@ print("Your RPG Character")
 print("Username is: " + username)
 print("Your race is: " + race)
 print("Skillpoints breakdown")
-print("Magic", + magicCnt)
-print("Speech", + speechCnt)
-print("Attack", + attackCnt)
-print("Defence", + defenceCnt)
+print("Magic", + magicPoints)
+print("Speech", + speechPoints)
+print("Attack", + attackPoints)
+print("Defence", + defencePoints)
 
             
 
