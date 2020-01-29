@@ -65,6 +65,9 @@ if choice == '1':
             skillPoints = pointsLeft
             defencePoints += points
             print("You have ", + pointsLeft, " left")
+
+        elif skills != 'magic' or skills != 'speech' or skills != 'attack' or skills != 'defence':
+            print("Not a valid skill")
     
     print("------------------------------------------------")
 
