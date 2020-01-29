@@ -87,7 +87,7 @@ if choice == '2':
         thisdict[value1] = value2
         print(thisdict)
 
-        print("would you like to continue? Press 1 to continue press 2 to exit: ")
+        exit1 = input("would you like to continue? Press 1 to continue press 2 to exit: ")
 
-        
+
 
