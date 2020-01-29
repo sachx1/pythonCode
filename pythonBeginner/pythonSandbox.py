@@ -11,6 +11,8 @@ thisdict = {
     "Age": "21"
 }
 
+thisSet = {"apple", "coconuts", "Bananas", "Grapes"}
+
 if choice == '1':
     print("Welcome to the life rpg")
     print("You have 4 skills, Magic, Speech, Attack, Defence")
@@ -91,6 +93,17 @@ if choice == '2':
         print(thisdict)
 
         exit1 = int(input("would you like to continue? Press 1 to continue press 2 to exit: "))
+
+print("What would you like on the menu?")
+print(thisSet)
+
+menu = input("Menu selection: ")
+
+for x in thisSet:
+    if menu == x:
+        print("That is on the menu, we will serve you shortly")
+    elif menu != x:
+        print("That is not on the menu, please choose again")
 
 
 
