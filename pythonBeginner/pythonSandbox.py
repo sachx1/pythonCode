@@ -97,13 +97,25 @@ if choice == '2':
 print("What would you like on the menu?")
 print(thisSet)
 
-menu = input("Menu selection: ")
+while True:
+    menu = input("Menu Selection: ")
 
-for x in thisSet:
-    if menu == x:
-        print("That is on the menu, we will serve you shortly")
-    elif menu != x:
-        print("That is not on the menu, please choose again")
+    for x in thisSet:
+        if menu == x:
+            print("That is on the menu, we will serve you shortly ")
+            break
+        elif menu != x:
+            print("That is not on the menu, please choose again")
+
+
+
+#menu = input("Menu selection: ")
+
+#for x in thisSet:
+#    if menu == x:
+#        print("That is on the menu, we will serve you shortly")
+#    elif menu != x:
+#        print("That is not on the menu, please choose again")
 
 
 
