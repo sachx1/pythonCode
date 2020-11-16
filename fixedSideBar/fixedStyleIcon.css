@@ -65,7 +65,7 @@ svg{
     font-size: 15px;
 }
 
-.sidebar a:hover, .dropdown-btn:hover, .move:hover{
+.move:hover{
    color: #fff;
    margin-left: 10px;
    transition: 0.4s;
