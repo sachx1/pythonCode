@@ -1,4 +1,4 @@
-name = input('What would you like to name your file? ')
+name = raw_input('What would you like to name your file? ')
 
 f = open(name, 'w')
 
