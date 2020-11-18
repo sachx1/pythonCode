@@ -2,7 +2,7 @@ import sys
 
 #name = input("name of the file ")
 
-file = open("someFile.html", "w")
+file = open("someFile.html", "w+")
 
 number = input("how many STL's are in use? ")
 
@@ -13,6 +13,8 @@ if number == 3:
     heartPiece2 = raw_input("name of the piece ")
 
     heartPiece3 = raw_input("name of the piece ")
+
+    
 
     message = """
                 <!DOCTYPE html>
@@ -332,9 +334,7 @@ if number == 3:
 
                             var oLoader3 = new THREE.OBJLoader();
 
-                            oLoader.load('""" + heartPiece 
-
-    message2 = """', function(object, materials) {
+                            oLoader.load('""" + heartPiece + rstrip() + """', function(object, materials) {
 
                                 // var material = new THREE.MeshFaceMaterial(materials);
                                 var material2 = new THREE.MeshLambertMaterial({
@@ -365,7 +365,7 @@ if number == 3:
                                 });
                             });
 
-                            oLoader2.load('""" + heartPiece2 + """', function(object2, materials) {
+                            oLoader2.load('""" + heartPiece2 + rstrip() + """', function(object2, materials) {
 
                                 // var material = new THREE.MeshFaceMaterial(materials);
                                 var material2 = new THREE.MeshLambertMaterial({
@@ -396,7 +396,7 @@ if number == 3:
 
                             });
 
-                            oLoader3.load('""" + heartPiece3 + """', function(object3, materials) {
+                            oLoader3.load('""" + heartPiece3 + rstrip() + """', function(object3, materials) {
 
                                 // var material = new THREE.MeshFaceMaterial(materials);
                                 var material2 = new THREE.MeshLambertMaterial({
@@ -493,12 +493,17 @@ if number == 3:
 
                 </html>"""
     
+    #paragraph = file.readlines()
+    
+    #for message in paragraph:
+    #    message = message.replace("\n"," ")
+    #    file.write(message)
 
 
+        
+    file.write(message)
 
-file.write(message)
-
-file.write(rstrip('\n') + message2)
+#file.write(rstrip('\n'))
 
 #file.write(message2)
 
