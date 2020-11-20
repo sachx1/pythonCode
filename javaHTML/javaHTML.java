@@ -61,7 +61,7 @@ public class javaHTML {
             bw.write(" <title>2018017-01 High Resolution</title>" + "\n" + 
             "<meta charset=\"utf-8\">" + "\n" + 
             "<meta name=\"viewport\" content=\"width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0\">");
-            bw.write("<style>" + "\n" + 
+            bw.write("\n" + "\n" + "<style>" + "\n" + 
             "@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');" + "\n" +
             "body {" + "\n" + 
                "/*background-color: #ccc;*/" + "\n" + 
@@ -125,6 +125,231 @@ public class javaHTML {
                 "background: grey;" + "\n" + 
                 "padding-top: 50px;" + "\n" + 
                 "}");
+            bw.write("\n" + "\n" + ".sidebar h1{" + "\n" + 
+                "display: block;" + "\n" + 
+                "padding: 10px 20px;" + "\n" + 
+                "color: #fff;" + "\n" + 
+                "text-decoration: none;" + "\n" + 
+                "font-family: \"Rubik\";" + "\n" + 
+                "letter-spacing: 2px;" + "\n" + 
+                "font-weight: 400;" + "\n" + 
+                "margin: 0;" + "\n" + 
+                "font-size: 20px;" + "\n" + 
+                "text-transform: uppercase;" + "\n" + 
+                "}");
+            bw.write("\n" + "\n" + ".sidebar a {" + "\n" + 
+                "display: block;" + "\n" + 
+                "padding: 10px 20px;" + "\n" + 
+                "color: #bbb;" + "\n" + 
+                "outline: none;" + "\n" + 
+                "border: none;" + "\n" + 
+                "background: none;" + "\n" + 
+                "text-decoration: none;" + "\n" + 
+                "font-family: \"Rubik\";" + "\n" + 
+                "letter-spacing: 2px;" + "\n" + 
+                
+                "}");
+            bw.write("\n" + "\n" + ".dropdown-btn{" + "\n" + 
+                "font-size: 15px;" + "\n" + 
+            "}");
+            bw.write("\n" + "\n" + ".sidebar a:hover{" + "\n" + 
+                "color: #fff;" + "\n" + 
+                "margin-left: 10px;" + "\n" + 
+                "transition: 0.4s;" + "\n" + 
+                "}");
+            bw.write("\n" + "\n" + ".sidebar a.hoverspeed:hover{" + "\n" + 
+                "color: #fff;" + "\n" + 
+                "margin-left: 7px;" + "\n" + 
+                "transition: 0.4s;" + "\n" + 
+            "}");
+            bw.write("\n" + "\n" + ".sidebar a.yellow{" + "\n" + 
+                "background-color: yellow;" + "\n" + 
+                "color:black;" + "\n" + 
+                "}");
+            bw.write("\n" + "\n" + ".sidebar a.yellow:hover{" + "\n" + 
+                "margin-left: 10px;" + "\n" + 
+                "transition: 0.4s;" + "\n" + 
+                "}");
+            bw.write("\n" + "\n" + ".sidebar a.red{" + "\n" + 
+                "background-color: red;" + "\n" + 
+                "color:black;" + "\n" + 
+                "}");
+            bw.write("\n" + "\n" + ".sidebar a.red:hover{" + "\n" + 
+                "margin-left: 10px;" + "\n" + 
+                "transition: 0.4s;" + "\n" + 
+                "}");
+            bw.write("\n" + "\n" + ".sidebar a.blue{" + "\n" + 
+                "background-color: blue;" + "\n" + 
+                "color: black;" + "\n" + 
+            "}");
+            bw.write("\n" + "\n" + ".sidebar a.blue:hover{" + "\n" + 
+                "margin-left: 10px;" + "\n" +  
+                "transition: 0.4s;" + "\n" + 
+            "}");
+            bw.write("\n" + "\n" + ".sidebar a.info:hover{" + "\n" + 
+                "background-color: black;" + "\n" + 
+                "margin-left: 10px;" + "\n" + 
+                "transition: 0.4s;" +"\n" + 
+            "}");
+            bw.write("\n" + "\n" + "</style>" + "\n" + 
+            "</head>");
+            bw.write("\n" + "\n" + "<body>" + "\n" + 
+
+            "\t" + "<div class=\"sidebar\">" + "\n" + 
+                "\t" + "\t" + "<a href=\"https://apil.ca/\" class=\"hoverspeed\"><img src=\"https://apillogo.s3.ca-central-1.amazonaws.com/APIL_LOGO.png\" alt=\"Apil\" width=\"175\" height=\"75\" style=\"vertical-align:left;margin:0px -5px\"></a>" + "\n" + 
+                "\t" + "\t" + "<a href=\"#Aorta\" class=\"yellow\" id=\"hideShow\">Aorta</a>" + "\n" + 
+                "\t" + "\t" + "<a href=\"#atriaVentricle\" class=\"red\" id=\"hideShow2\">Atria Ventricle</a>" + "\n" + 
+                "\t" + "\t" + "<a href=\"#venaCava\" class=\"blue\" id=\"hideShow3\">Vena Cava</a>");
+            bw.write("\n" + "</div>");
+            bw.write("\n" + "\t" + "<script src=\"three.js\"></script>" + "\n" + 
+           "\t" + "<script src=\"OrbitControls.js\"></script>" + "\n" + 
+            "\t" + "<script src=\"GLTFLoader.js\"></script>" + "\n" + 
+            "\t" + "<script src=\"OBJLoader.js\"></script>" + "\n" + 
+            "\t" + "<script src=\"WebGL.js\"></script>");
+            bw.write("\n" + "\n" + "\t" + "<script>");
+            bw.write("\n" + "\n" + "\t" + "\t" + "var camera, controls, scene, renderer, object, object2, object3, object4, object5;" + "\n" + 
+            "\t" + "\t" + "var objhidden = false;" + "\n" + 
+            "\t" + "\t" + "init();");
+            bw.write("\n" + "\n" + "\t" + "\t" + "animate();" + "\n" + 
+            "\t" + "\t" + "function init() {");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + " scene = new THREE.Scene();" +"\n" + 
+            "\t" + "\t" + "\t" + "scene.background = new THREE.Color(0x000000);");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + " renderer = new THREE.WebGLRenderer({" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "antialias: true"+ "\n" + 
+            "});");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "renderer.setPixelRatio(window.devicePixelRatio);" + "\n" + 
+            "\t" + "\t" + "\t" + "renderer.setSize(window.innerWidth, window.innerHeight);" + "\n" + 
+            "\t" + "\t" + "\t" + "document.body.appendChild(renderer.domElement);" + "\n" + 
+            "\t" + "\t" + "\t" + "camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);" + "\n" + 
+            "\t" + "\t" + "\t" + "camera.position.set(0, 0, -400);");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "controls = new THREE.OrbitControls(camera, renderer.domElement);" + "\n" + "\n" + 
+            "\t" + "\t" + "\t" + "//controls.addEventListener( 'change', render ); // call this only in static scenes (i.e., if there is no animation loop)" + "\n" +
+            "\t" + "\t" + "\t" + "controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled" + "\n" + 
+            "\t" + "\t" + "\t" + "controls.dampingFactor = 0.25;" + "\n" + 
+            "\t" + "\t" + "\t" + "controls.screenSpacePanning = false;" + "\n" + 
+            "\t" + "\t" + "\t" + "controls.minDistance = 100;" + "\n" + 
+            "\t" + "\t" + "\t" + "controls.maxDistance = 500;" + "\n" + 
+            "\t" + "\t" + "\t" + "controls.maxPolarAngle = Math.PI;");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "var oLoader = new THREE.OBJLoader();" + "\n" + 
+            "\t" + "\t" + "\t" + "var oLoader2 = new THREE.OBJLoader();" + "\n" + 
+            "\t" + "\t" + "\t" +"var oLoader3 = new THREE.OBJLoader();");
+
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "oLoader.load(\'" + name1 + "\', function(object, materials) {");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "\t" + "// var material = new THREE.MeshFaceMaterial(materials);" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "var material2 = new THREE.MeshLambertMaterial({" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "color: 0xa65e00" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "});");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "object.traverse(function(child) {" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "if (child instanceof THREE.Mesh) {" + "\n" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "// apply custom material" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "child.material = material2;" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "// enable casting shadows" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "child.castShadow = true;" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "child.receiveShadow = true;" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "}" + "\n" + 
+            "\t" + "\t" + "\t" + "});");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "object.position.x = 0;" + "\n" + 
+            "\t" + "\t" + "\t" + "object.position.y = 0;" + "\n" + 
+            "\t" + "\t" + "\t" + "object.position.z = 0;" + "\n" + 
+            "\t" + "\t" + "\t" + "object.scale.set(1, 1, 1);" + "\n" + 
+            "\t" + "\t" + "\t" + "scene.add(object);");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "document.getElementById('hideShow').addEventListener('click', function() {" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "object.visible = !object.visible;" + "\n" + 
+            "\t" + "\t" + "\t" + "});" + "\n" + 
+            "\t" + "\t" + "\t" + "});");
+            
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "oLoader2.load(\'" + name2 + "\', function(object2, materials) {");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "\t" + "// var material = new THREE.MeshFaceMaterial(materials);" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "var material2 = new THREE.MeshLambertMaterial({" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "color: 0xff0000" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "});");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "object2.traverse(function(child) {" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "if (child instanceof THREE.Mesh) {" + "\n" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "// apply custom material" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "child.material = material2;" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "// enable casting shadows" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "child.castShadow = true;" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "child.receiveShadow = true;" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "}" + "\n" + 
+            "\t" + "\t" + "\t" + "});");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "object2.position.x = 0;" + "\n" + 
+            "\t" + "\t" + "\t" + "object2.position.y = 0;" + "\n" + 
+            "\t" + "\t" + "\t" + "object2.position.z = 0;" + "\n" + 
+            "\t" + "\t" + "\t" + "object2.scale.set(1, 1, 1);" + "\n" + 
+            "\t" + "\t" + "\t" + "scene.add(object2);");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "document.getElementById('hideShow2').addEventListener('click', function() {" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "object2.visible = !object2.visible;" + "\n" + 
+            "\t" + "\t" + "\t" + "});" + "\n" + 
+            "\t" + "\t" + "\t" + "});");
+
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "oLoader3.load(\'" + name3 + "\', function(object3, materials) {");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "\t" + "// var material = new THREE.MeshFaceMaterial(materials);" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "var material2 = new THREE.MeshLambertMaterial({" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "color: 0x0000ff" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "});");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "object3.traverse(function(child) {" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "if (child instanceof THREE.Mesh) {" + "\n" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "// apply custom material" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "child.material = material2;" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "// enable casting shadows" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "child.castShadow = true;" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "\t" + "child.receiveShadow = true;" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "}" + "\n" + 
+            "\t" + "\t" + "\t" + "});");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "object3.position.x = 0;" + "\n" + 
+            "\t" + "\t" + "\t" + "object3.position.y = 0;" + "\n" + 
+            "\t" + "\t" + "\t" + "object3.position.z = 0;" + "\n" + 
+            "\t" + "\t" + "\t" + "object3.scale.set(1, 1, 1);" + "\n" + 
+            "\t" + "\t" + "\t" + "scene.add(object3);");
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "document.getElementById('hideShow3').addEventListener('click', function() {" + "\n" + 
+            "\t" + "\t" + "\t" + "\t" + "object3.visible = !object3.visible;" + "\n" + 
+            "\t" + "\t" + "\t" + "});" + "\n" + 
+            "\t" + "\t" + "\t" + "});");
+
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "// lights" + "\n" + 
+            "\t" + "\t" + "\t" + "var light = new THREE.DirectionalLight(0xffffff, 2);" + "\n" + 
+            "\t" + "\t" + "\t" + "light.position.set(1, 1, 1);" + "\n" + 
+            "\t" + "\t" + "\t" + "scene.add(light);");
+
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "// lights" + "\n" + 
+            "\t" + "\t" + "\t" + "var light = new THREE.DirectionalLight(0xffffff, 2);" + "\n" + 
+            "\t" + "\t" + "\t" + "light.position.set(-1, -1, -1);" + "\n" + 
+            "\t" + "\t" + "\t" + "scene.add(light);");
+
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "// lights" + "\n" + 
+            "\t" + "\t" + "\t" + "var light = new THREE.DirectionalLight(0xffffff, 2);" + "\n" + 
+            "\t" + "\t" + "\t" + "light.position.set(-1, -1, -90);" + "\n" + 
+            "\t" + "\t" + "\t" + "scene.add(light);");
+
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "// lights" + "\n" + 
+            "\t" + "\t" + "\t" + "var light = new THREE.DirectionalLight(0xffffff, 2);" + "\n" + 
+            "\t" + "\t" + "\t" + "light.position.set(-50, -30, 40);" + "\n" + 
+            "\t" + "\t" + "\t" + "scene.add(light);");
+
+            bw.write("\n" + "\n" + "\t" + "\t" + "\t" + "window.addEventListener('resize', onWindowResize, false);");
+
+            bw.write("\n" + "\n" + "\t" + "\t" + "}");
+
+            bw.write("\n" + "\n" + "\t" + "\t" + "function onWindowResize() {" + "\n" + 
+            "\t" + "\t" + "\t" + "camera.aspect = window.innerWidth / window.innerHeight;" + "\n" + 
+            "\t" + "\t" + "\t" + "camera.updateProjectionMatrix();" + "\t" + 
+            "\t" + "\t" + "\t" + "renderer.setSize(window.innerWidth, window.innerHeight);" + "\t" + 
+            "\t" + "\t" + "}");
+
+            bw.write("\n" + "\n" + "\t" + "\t" + "function animate() {" + "\n" + 
+            "\t" + "\t" + "\t" + "requestAnimationFrame(animate);" + "\n" + 
+            "\t" + "\t" + "\t" + "controls.update(); // only required if controls.enableDamping = true, or if controls.autoRotate = true" + "\n" + 
+            "\t" + "\t" + "\t" + "render();" + "\n" + 
+            "\t" + "\t" + "\t" + "}");
+
+            bw.write("\n" + "\n" + "\t" + "\t" + "function render() {" + "\n" + 
+            "\t" + "\t" + "\t" + "renderer.render(scene, camera);" + "\n" + 
+            "\t" + "\t" + "}");
+
+            bw.write("\n" + "\n" + "\t" + "\t" + "</script>" + "\n" + 
+            "\t" + "</body>" + "\n" + 
+            "\t" + "</html>");
+            
             bw.close();
             System.out.println("Successfully wrote to the file.");
           } catch (IOException e) {

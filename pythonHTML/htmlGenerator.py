@@ -334,7 +334,7 @@ if number == 3:
 
                             var oLoader3 = new THREE.OBJLoader();
 
-                            oLoader.load('""" + heartPiece + rstrip() + """', function(object, materials) {
+                            oLoader.load('""" + heartPiece + """', function(object, materials) {
 
                                 // var material = new THREE.MeshFaceMaterial(materials);
                                 var material2 = new THREE.MeshLambertMaterial({
