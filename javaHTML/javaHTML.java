@@ -16,10 +16,18 @@ public class javaHTML {
         String name4;
         String name5;
         String name6;
+        //String fileName1;
+
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+
         System.out.println("How many STL's are being used? Choices: | 3 | 4 | 5 | 6 |");
         int choice = myObj.nextInt();
-        System.out.println(choice);
+
+        /*System.out.println("What would you like to name the file? ");
+        myObj.nextLine();
+        fileName1 = myObj.nextLine();*/
+
+        
         if (choice == 3){
             createFile();
             System.out.println("Name of the heartpiece ");
@@ -35,6 +43,7 @@ public class javaHTML {
         } 
         
         if (choice == 4){
+            //createFile(fileName1);
             System.out.println("Name of the heartpiece ");
             myObj.nextLine();
             name1 = myObj.nextLine();
@@ -49,6 +58,7 @@ public class javaHTML {
         }
         
         if (choice == 5){
+            //createFile(fileName1);
             System.out.println("Name of the HeartPiece ");
             myObj.nextLine(); 
             name1 = myObj.nextLine();
@@ -60,6 +70,7 @@ public class javaHTML {
         }
 
         if (choice == 6){
+            //createFile(fileName1);
             System.out.println("Name of heartpieces ");
             myObj.nextLine();
             name1 = myObj.nextLine();
@@ -528,15 +539,17 @@ public class javaHTML {
                 "}");
             bw.write("\n" + "\n" + ".sidebar a.blue{" + "\n" + 
                 "background-color: blue;" + "\n" + 
-                "color: black;" + "\n" + 
+                "color: white;" + "\n" + 
             "}");
             bw.write("\n" + "\n" + ".sidebar a.blue:hover{" + "\n" + 
                 "margin-left: 10px;" + "\n" +  
                 "transition: 0.4s;" + "\n" + 
             "}");
-            bw.write("\n" + "\n" + ".sidebar a.green:hover{" + "\n" + 
+            bw.write("\n" + "\n" + ".sidebar a.green{" + "\n" + 
                 "background-color: green;" + "\n" + 
                 "color:black;" + "\n" + 
+                "}");
+            bw.write("\n" + "\n" + ".sidebar a.green:hover{" + "\n" + 
                 "margin-left: 10px;" + "\n" + 
                 "transition: 0.4s;" + "\n" + 
                 "}");
@@ -884,21 +897,27 @@ public class javaHTML {
                 "margin-left: 10px;" + "\n" +  
                 "transition: 0.4s;" + "\n" + 
             "}");
-            bw.write("\n" + "\n" + ".sidebar a.green:hover{" + "\n" + 
+            bw.write("\n" + "\n" + ".sidebar a.green{" + "\n" + 
                 "background-color: green;" + "\n" + 
                 "color:black;" + "\n" + 
+                "}");
+            bw.write("\n" + "\n" + ".sidebar a.green:hover{" + "\n" + 
                 "margin-left: 10px;" + "\n" + 
                 "transition: 0.4s;" + "\n" + 
                 "}");
-            bw.write("\n" + "\n" + ".sidebar a.skyBlue:hover{" + "\n" + 
-                "background-color: skyblue;" + "\n" + 
+            bw.write("\n" + "\n" + ".sidebar a.skyBlue{" + "\n" + 
+                "background-color: skyBlue;" + "\n" + 
                 "color:black;" + "\n" + 
+                "}");
+            bw.write("\n" + "\n" + ".sidebar a.skyBlue:hover{" + "\n" +  
                 "margin-left: 10px;" + "\n" + 
                 "transition: 0.4s;" + "\n" + 
                 "}");
-            bw.write("\n" + "\n" + ".sidebar a.orange:hover{" + "\n" + 
+            bw.write("\n" + "\n" + ".sidebar a.orange{" + "\n" + 
                 "background-color: orange;" + "\n" + 
                 "color:black;" + "\n" + 
+                "}");
+            bw.write("\n" + "\n" + ".sidebar a.orange:hover{" + "\n" + 
                 "margin-left: 10px;" + "\n" + 
                 "transition: 0.4s;" + "\n" + 
                 "}");
@@ -915,7 +934,7 @@ public class javaHTML {
                 "\t" + "\t" + "<a href=\"https://apil.ca/\" class=\"hoverspeed\"><img src=\"https://apillogo.s3.ca-central-1.amazonaws.com/APIL_LOGO.png\" alt=\"Apil\" width=\"175\" height=\"75\" style=\"vertical-align:left;margin:0px -5px\"></a>" + "\n" + 
                 "\t" + "\t" + "<a href=\"#Aorta\" class=\"yellow\" id=\"hideShow\">Aorta</a>" + "\n" + 
                 "\t" + "\t" + "<a href=\"#Pulmonary Artery\" class=\"green\" id=\"hideShow2\">Pulmonary Artery</a>" + "\n" + 
-                "\t" + "\t" + "<a href=\"#Left Atrium\" class=\"orange\" id=\"hideShow3\">Left Atrium/a>" + "\n" + 
+                "\t" + "\t" + "<a href=\"#Left Atrium\" class=\"orange\" id=\"hideShow3\">Left Atrium</a>" + "\n" + 
                 "\t" + "\t" + "<a href=\"#Right Atrium\" class=\"skyBlue\" id=\"hideShow4\">Right Atrium</a>" + "\n" + 
                 "\t" + "\t" + "<a href=\"#Left Ventricle\" class=\"red\" id=\"hideShow5\">Left Ventricle</a>");
             bw.write("\n" + "</div>");
@@ -1263,21 +1282,27 @@ public class javaHTML {
                 "margin-left: 10px;" + "\n" +  
                 "transition: 0.4s;" + "\n" + 
             "}");
-            bw.write("\n" + "\n" + ".sidebar a.green:hover{" + "\n" + 
+            bw.write("\n" + "\n" + ".sidebar a.green{" + "\n" + 
                 "background-color: green;" + "\n" + 
                 "color:black;" + "\n" + 
+                "}");
+            bw.write("\n" + "\n" + ".sidebar a.green:hover{" + "\n" +  
                 "margin-left: 10px;" + "\n" + 
                 "transition: 0.4s;" + "\n" + 
+                "}");
+            bw.write("\n" + "\n" + ".sidebar a.skyBlue{" + "\n" + 
+                "background-color: skyBlue;" + "\n" + 
+                "color:black;" + "\n" + 
                 "}");
             bw.write("\n" + "\n" + ".sidebar a.skyBlue:hover{" + "\n" + 
-                "background-color: skyblue;" + "\n" + 
-                "color:black;" + "\n" + 
                 "margin-left: 10px;" + "\n" + 
                 "transition: 0.4s;" + "\n" + 
                 "}");
-            bw.write("\n" + "\n" + ".sidebar a.orange:hover{" + "\n" + 
+            bw.write("\n" + "\n" + ".sidebar a.orange{" + "\n" + 
                 "background-color: orange;" + "\n" + 
                 "color:black;" + "\n" + 
+                "}");
+            bw.write("\n" + "\n" + ".sidebar a.orange:hover{" + "\n" + 
                 "margin-left: 10px;" + "\n" + 
                 "transition: 0.4s;" + "\n" + 
                 "}");
@@ -1294,10 +1319,10 @@ public class javaHTML {
                 "\t" + "\t" + "<a href=\"https://apil.ca/\" class=\"hoverspeed\"><img src=\"https://apillogo.s3.ca-central-1.amazonaws.com/APIL_LOGO.png\" alt=\"Apil\" width=\"175\" height=\"75\" style=\"vertical-align:left;margin:0px -5px\"></a>" + "\n" + 
                 "\t" + "\t" + "<a href=\"#Aorta\" class=\"yellow\" id=\"hideShow\">Aorta</a>" + "\n" + 
                 "\t" + "\t" + "<a href=\"#Pulmonary Artery\" class=\"green\" id=\"hideShow2\">Pulmonary Artery</a>" + "\n" + 
-                "\t" + "\t" + "<a href=\"#Left Atrium\" class=\"orange\" id=\"hideShow3\">Left Atrium/a>" + "\n" + 
+                "\t" + "\t" + "<a href=\"#Left Atrium\" class=\"orange\" id=\"hideShow3\">Left Atrium</a>" + "\n" + 
                 "\t" + "\t" + "<a href=\"#Right Atrium\" class=\"skyBlue\" id=\"hideShow4\">Right Atrium</a>" + "\n" + 
                 "\t" + "\t" + "<a href=\"#Left Ventricle\" class=\"red\" id=\"hideShow5\">Left Ventricle</a>" + "\n" + 
-                "\t" + "\t" + "<a href=\"#Left Ventricle\" class=\"red\" id=\"hideShow5\">Left Ventricle</a>");
+                "\t" + "\t" + "<a href=\"#Left Ventricle\" class=\"blue\" id=\"hideShow5\">Right Ventricle</a>");
             bw.write("\n" + "</div>");
             bw.write("\n" + "\t" + "<script src=\"three.js\"></script>" + "\n" + 
            "\t" + "<script src=\"OrbitControls.js\"></script>" + "\n" + 
