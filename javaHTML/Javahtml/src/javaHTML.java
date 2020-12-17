@@ -1,4 +1,4 @@
-package javaHTML;
+//package javaHTML;
 import java.awt.Desktop;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -8,20 +8,26 @@ import java.io.IOException;  // Import the IOException class to handle errors
 import java.io.FileWriter;
 import java.util.Scanner;
 import java.io.FileReader;
-//import com.opencsv.CSVReader;
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvValidationException;
+
 
 public class javaHTML {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, CsvValidationException {
         String name1;
         String name2; 
         String name3;
         String name4;
         String name5;
         String name6;
-        var csvFileName = "test.csv";
+        String csvFileName = "C:/Users/sachx/pythonCode/javaHTML/Javahtml/src/test.csv";
+        String line = "";
+        String cvsSplitBy = ",";
         String heartName = "Fontan";
-        String [] nextLine;
+        CSVReader reader = null;
+        //BufferedReader br = new BufferedReader();
+        //String [] nextLine;
         //String fileName1;
 
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
@@ -67,20 +73,41 @@ public class javaHTML {
         
         if (choice == 5){
             //createFile(fileName1);
-            System.out.println("Name of the HeartPiece ");
-            myObj.nextLine(); 
-            name1 = myObj.nextLine();
-            name2 = myObj.nextLine();  
-            name3 = myObj.nextLine(); 
-            name4 = myObj.nextLine();
-            name5 = myObj.nextLine();
-            /*while ((nextLine = reader.readNext()) != null) {
-
-                for (var e : nextLine) {
-                    System.out.format("%s ", e);
-                }*/
-            fileWriter3(name1, name2, name3, name4, name5);
+            name1 = "";
+            name2 = "";
+            name3 = "";
+            name4 = "";
+            name5 = "";
+            try{
+            //Get the CSVReader instance with specifying the delimiter to be used
+            reader = new CSVReader(new FileReader("C:/Users/sachx/pythonCode/javaHTML/Javahtml/src/test.csv"));
+ 
+            String [] nextLine;
+ 
+            //Read one line at a time
+            while ((nextLine = reader.readNext()) != null) 
+            {
+                for(String token : nextLine)
+                {
+                    //Print all tokens
+                    System.out.println(token);
+                }
+            }
         }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            try {
+                reader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+         
+
+
 
         if (choice == 6){
             //createFile(fileName1);
