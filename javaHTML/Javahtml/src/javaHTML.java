@@ -30,8 +30,19 @@ public class javaHTML {
         //String [] nextLine;
         //String fileName1;
         String test;
+        int newFile;
 
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+
+        System.out.println("Will you be creating a new file or updating a pre-existing file? ");
+        newFile = myObj.nextInt();
+
+        if (newFile == 1){
+            name1 = "";
+            name2 = "";
+            name3 = "";
+            newFile(name1, name2, name3);
+        }
 
         System.out.println("How many STL's are being used? Choices: | 3 | 4 | 5 | 6 |");
         int choice = myObj.nextInt();
@@ -163,6 +174,27 @@ public class javaHTML {
             System.out.println("An error occurred.");
             e.printStackTrace();
           }
+      }
+
+      public static void newFile(String name1, String name2, String name3){
+
+        Scanner myObj = new Scanner(System.in);
+        System.out.println("How many STL's are being used? Choices: | 3 | 4 | 5 | 6 |");
+        int choice = myObj.nextInt();
+
+        if (choice == 3){
+            createFile();
+            System.out.println("Name of the heartpiece ");
+            myObj.nextLine(); //creates line so program does not skip
+            name1 = myObj.nextLine();
+            name2 = myObj.nextLine();  
+            name3 = myObj.nextLine(); 
+            if (name1 != null || name2 != null || name3 != null){
+                fileWriter(name1, name2, name3); //helps pass parameters to fileWriter method
+            } else {
+                System.out.println("end program");
+            }
+        } 
       }
 
       public static void fileWriter(String name1, String name2, String name3){ //passes parameters to the method
