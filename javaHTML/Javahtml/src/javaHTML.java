@@ -1,11 +1,14 @@
+
 //package javaHTML;
 import java.awt.Desktop;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 
-import java.io.File;  // Import the File class
-import java.io.IOException;  // Import the IOException class to handle errors
+import java.io.File; // Import the File class
+import java.io.IOException; // Import the IOException class to handle errors
 import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.io.FileReader;
 import com.opencsv.CSVReader;
@@ -21,14 +24,12 @@ public class javaHTML {
         String name4;
         String name5;
         String name6;
-        String csvFileName = "C:/Users/sachx/pythonCode/javaHTML/Javahtml/src/test.csv";
-        String line = "";
-        String cvsSplitBy = ",";
-        String heartName = "Fontan";
-        CSVReader reader = null;
+        String path = "C:/Users/sachx/pythonCode/javaHTML/Javahtml/src/test.csv";
+        String COMMA_DELIMITER = ",";
         //BufferedReader br = new BufferedReader();
         //String [] nextLine;
         //String fileName1;
+        String test;
 
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
 
@@ -38,8 +39,7 @@ public class javaHTML {
         /*System.out.println("What would you like to name the file? ");
         myObj.nextLine();
         fileName1 = myObj.nextLine();*/
-        /*try (var fr = new FileReader(csvFileName, StandardCharsets.UTF_8);
-             var reader = new CSVReader(fr)) {*/
+        
 
         
         if (choice == 3){
@@ -78,32 +78,59 @@ public class javaHTML {
             name3 = "";
             name4 = "";
             name5 = "";
-            try{
-            //Get the CSVReader instance with specifying the delimiter to be used
-            reader = new CSVReader(new FileReader("C:/Users/sachx/pythonCode/javaHTML/Javahtml/src/test.csv"));
- 
-            String [] nextLine;
- 
-            //Read one line at a time
-            while ((nextLine = reader.readNext()) != null) 
-            {
-                for(String token : nextLine)
-                {
-                    //Print all tokens
-                    System.out.println(token);
-                }
-            }
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-        finally {
+
             try {
-                reader.close();
-            } catch (IOException e) {
+                BufferedReader br = new BufferedReader(new FileReader(path));
+                List<String> result = new ArrayList<>();
+                String line;
+    
+                while ((line = br.readLine()) != null){
+                    //System.out.println(line);
+                    String [] values = line.split(COMMA_DELIMITER);
+                    //System.out.println(line);
+                    //System.out.println(Array.get(values, 0));
+                    //result.add(Arrays.asList(values));
+                    if(values[1].equals("aligned_ao.obj")){
+                        result.add("aligned_ao.obj");
+                        //System.out.println("Yes that heart exists");
+                    }
+                    if (values[2].equals("aligned_pa.obj")){
+                        result.add("aligned_pa.obj");
+                    }
+                    if (values[3].equals("aligned_la.obj")){
+                        result.add("aligned_la.obj");
+                    }
+                    if (values[4].equals("aligned_lv.obj")){
+                        result.add("aligned_lv.obj");
+                    }
+                    if (values[5].equals("aligned_rv.obj")){
+                        result.add("aligned_rv.obj");
+                    }
+                    
+                }
+                name1 = result.get(0);
+
+                name2 = result.get(1);
+                
+                name3 = result.get(2);
+                
+                name4 = result.get(3);
+                
+                name5 = result.get(4);
+                //System.out.println(name1 + ", " + name2 + ", " + name3 + ", " + name4 + ", " + name5);
+            } catch (FileNotFoundException e) {
+                
+                // TODO Auto-generated catch block
                 e.printStackTrace();
+
+            } catch (IOException e) {
+                
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+
             }
-        }
+            fileWriter3(name1, name2, name3, name4, name5);
+            
     }
          
 
